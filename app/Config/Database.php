@@ -48,7 +48,7 @@ class Database extends Config
      * This database connection is used when
      * running PHPUnit database tests.
      */
-    public array $tests = [
+    public array $bezzeting = [
         'DSN'         => '',
         'hostname'    => '127.0.0.1',
         'username'    => '',
