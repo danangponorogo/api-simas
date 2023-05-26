@@ -32,12 +32,12 @@ class Home extends BaseController
     {
         $bezzeting = new BezzetingModel();
         $data = $bezzeting->select([
-            'id',
-            'pId',
-            'name',
-            'eselon_id',
-            'jabatan_id'
-        ])->findAll();
+            'id idsimpeg',
+            'pId pidsimpeg',
+            'name nama',
+            'eselon_id ideselon',
+            'jabatan_id idjabatan'
+        ])->where('pId !=', 0)->findAll();
 
         return $this->response->setJSON($data);
     }
