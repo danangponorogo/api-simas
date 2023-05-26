@@ -31,6 +31,10 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 // $routes->get('/biodata(:any)', 'Home::getBiodata$1');
 
+$routes->get('/', function () {
+    return redirect()->to('/bezzeting');
+});
+
 $routes->get('/biodata', 'Home::getBiodata');
 $routes->get('/biodata/(:num)', 'Home::getBiodata/$1');
 
