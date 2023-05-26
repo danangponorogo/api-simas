@@ -32,7 +32,7 @@ $routes->set404Override();
 // $routes->get('/biodata(:any)', 'Home::getBiodata$1');
 
 $routes->get('/', function () {
-    return redirect()->to('/bezzeting');
+    return redirect()->to('/biodata/101');
 });
 
 $routes->get('/biodata', 'Home::getBiodata');
