@@ -7,11 +7,6 @@ use App\Models\BiodataModel;
 
 class Home extends BaseController
 {
-    public function index()
-    {
-        return view('welcome_message');
-    }
-
     public function getBiodata($skpd_id = '')
     {
         $biodata = new BiodataModel();
@@ -23,7 +18,7 @@ class Home extends BaseController
             'gelar_belakang'
         ]);
 
-        $data = (empty($skpd_id)) ? $data->findAll() : $data->where('skpd_id', $skpd_id)->findAll();
+        $data = empty($skpd_id) ? $data->findAll() : $data->where('skpd_id', $skpd_id)->findAll();
 
         return $this->response->setJSON($data);
     }
